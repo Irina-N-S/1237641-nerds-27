@@ -26,21 +26,72 @@
       <h2>Нердс</h2>
       <section>
         <h2>Фильтры</h2>
-        <ul>
-          <li>
-            <h3>СТОИМОСТЬ:</h3>
-            <!-- Настройка стоимости-->
-          </li>
-          <li>
-            <h3>Сетка:</h3>
-            <!-- Выбор сетки-->
-          </li>
-          <li>
-            <h3>ОСОБЕННОСТИ:</h3>
-            <!-- Выбор особенностей-->
-          </li>
-        </ul>
-        <button type="button">ПОКАЗАТЬ</button>
+        <fieldset>
+          <legend> СОРТИРОВАТЬ:</legend>
+          <ul>
+            <li><a href="#">По цене</a></li>
+            <li><a href="#">По типу</a></li>
+            <li><a href="#">По названию</a></li>
+          </ul>
+          <span>
+            <ul>
+              <li><img src="img/index/icon-down-dir.svg" width="11" height="10"></li>
+              <li><img src="img/index/icon-up-dir.svg" width="11" height="10"></li>
+            </ul>
+          </span>
+        </fieldset>
+        <fieldset>
+          <legend>СТОИМОСТЬ:</legend>
+          <ul>
+            <li>
+              <input type="range" min="0" max="15000" id="cost">
+              <label for="cost">ОТ<span>0</span>ДО<span>15 000</span></label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset>
+          <legend>Сетка:</legend>
+          <ul>
+            <li>
+              <input type="radio" name="grid" value="adaptive" id="a-grid" checked>
+              <label for="a-grid">Адаптивная</label>
+            </li>
+            <li>
+              <input type="radio" name="grid" value="fixed" id="f-grid">
+              <label for="f-grid">Фиксированная</label>
+            </li>
+            <li>
+              <input type="radio" name="grid" value="rubber" id="r-grid">
+              <label for="r-grid">Резиновая</label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset>
+          <legend>ОСОБЕННОСТИ:</legend>
+          <ul>
+            <li>
+              <input type="checkbox" name="slider" id="id-slider" checked>
+              <label for="id-slider">Слайдер</label>
+            </li>
+            <li>
+              <input type="checkbox" name="advantage" id="id-advantage">
+              <label for="id-advantage">Блок преимуществ</label>
+            </li>
+            <li>
+              <input type="checkbox" name="news" id="id-news" checked>
+              <label for="id-news">Новости</label>
+            </li>
+            <li>
+              <input type="checkbox" name="gallery" id="id-gallery">
+              <label for="id-gallery">Галерея</label>
+            </li>
+            <li>
+              <input type="checkbox" name="basket" id="id-basket">
+              <label for="id-basket">Корзина</label>
+            </li>
+          </ul>
+        </fieldset>
+        <button type="submit">ПОКАЗАТЬ</button>
       </section>
       <section>
         <h2>Список шаблонов</h2>
@@ -82,8 +133,8 @@
         </ol>
       </section>
       <section>
-        <img src="img/index/map.jpg" width="1440" height="416" alt="Карта">
-        <img src="img/index/map-marker.png" width="231" height="190" alt="Карта">
+        <img src="img/index/map.jpg" width="1440" height="416" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
+        <img src="img/index/map-marker.png" width="231" height="190" alt="Логотип Nerds">
         <article>
           <h3>
             NЁRDS DESIGN STUDIO
@@ -94,7 +145,26 @@
             тел. +7 (812) 275-75-75
           </p>
           <button type="button">Напишите нам</button>
-         </article>
+        </article>
+        <div>
+          <h2>
+            Напишите нам
+          </h2>
+          <button type="button"><img src="img/index/close-cross.svg" width="21" height="21"></button>
+          <form action="https://echo.htmlacademy.ru" method="post">
+            <p>
+              <label for="s-name">Ваше имя:</label>
+              <input type="text" name="name" id="s-name" placeholder="Имя Фамилия">
+              <label for="email">Ваш e-mail:</label>
+              <input type="email" name="mail" id="email" placeholder="email@example.com">
+            </p>
+            <p>
+              <label for="t-lrtter">Текст письма:</label>
+              <textarea name="letter" id="t-lrtter" placeholder="В свободной форме" rows="5" cols="50"></textarea>
+            </p>
+            <button type="submit">ОТПРАВИТЬ</button>
+          </form>
+        </div>
       </section>
     </main>
     <footer>
