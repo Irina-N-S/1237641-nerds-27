@@ -14,40 +14,43 @@
         <img src="img/index/nerds-logo.svg" width="160" height="65" alt="Логотип Нердс">
         </a>
         <ul>
-          <li><a href="#">Студия</a></li>
-          <li><a href="#">Клиенты</a></li>
-          <li><a href="#">Магазин</a></li>
-          <li><a href="#">Контакты</a></li>
+          <li><a href="">Студия</a></li>
+          <li><a href="">Клиенты</a></li>
+          <li><a>Магазин</a></li>
+          <li><a href="">Контакты</a></li>
         </ul>
-        <a href="#">Корзина</a>
+        <a href="">Корзина</a>
       </nav>
     </header>
     <main>
       <h2 class="visually-hidden">Нердс</h2>
       <section>
+        <form action="https://echo.htmlacademy.ru" method="post">
         <h2 class="visually-hidden">Фильтры</h2>
         <fieldset>
-          <legend> СОРТИРОВАТЬ:</legend>
+          <legend>Сортировать:</legend>
           <ul>
-            <li><a href="#">По цене</a></li>
-            <li><a href="#">По типу</a></li>
-            <li><a href="#">По названию</a></li>
+            <li><a href="">По цене</a></li>
+            <li><a href="">По типу</a></li>
+            <li><a href="">По названию</a></li>
           </ul>
           <span>
             <ul>
-              <li><img src="img/index/icon-down-dir.svg" width="11" height="10"></li>
-              <li><img src="img/index/icon-up-dir.svg" width="11" height="10"></li>
+              <li><a href=""><img src="img/index/icon-down-dir.svg" width="11" height="10"></a></li>
+              <li><a href=""><img src="img/index/icon-up-dir.svg" width="11" height="10"></a></li>
             </ul>
           </span>
         </fieldset>
         <fieldset>
           <legend>СТОИМОСТЬ:</legend>
-          <ul>
-            <li>
-              <input type="range" min="0" max="15000" id="cost">
-              <label for="cost">ОТ<span>0</span>ДО<span>15 000</span></label>
-            </li>
-          </ul>
+          <div>
+            <button type="button"></button>
+            <button type="button"></button>
+          </div>
+          <label for="id-from">ОТ</label>
+          <input type="text" name="from" id="id-from" value="0">
+          <label for="id-before">ДО</label>
+          <input type="text" name="before" id="id-before" value="15 000">
         </fieldset>
         <fieldset>
           <legend>Сетка:</legend>
@@ -91,7 +94,8 @@
             </li>
           </ul>
         </fieldset>
-        <button type="submit">ПОКАЗАТЬ</button>
+        <button type="submit">Показать</button>
+        </form>
       </section>
       <section>
         <h2 class="visually-hidden">Список шаблонов</h2>
@@ -100,7 +104,7 @@
               <img src="img/catalog/img-sedona.jpg" width="360" height="576" alt="Шаблон SEDONA">
             <div>
               <h3>
-                <a href="#">Sedona</a>
+                <a href="">Sedona</a>
               </h3>
               <p>
               Информационный сайт
@@ -127,9 +131,9 @@
         </ul>
         <ol>
           <li><a>1</a></li>
-          <li><a href="#">2</a></li>
-          <li><a href="#">3</a></li>
-          <li><a href="#">Следующая</a></li>
+          <li><a href="">2</a></li>
+          <li><a href="">3</a></li>
+          <li><a href="">Следующая</a></li>
         </ol>
       </section>
       <section>
@@ -162,16 +166,16 @@
               <label for="t-lrtter">Текст письма:</label>
               <textarea name="letter" id="t-lrtter" placeholder="В свободной форме" rows="5" cols="50"></textarea>
             </p>
-            <button type="submit">ОТПРАВИТЬ</button>
+            <button type="submit">Отправить</button>
           </form>
         </div>
       </section>
     </main>
     <footer>
       <ul>
-        <li><a href="#">Вконтакте</a></li>
-        <li><a href="#">Фейсбук</a></li>
-        <li><a href="#">Инстаграм</a></li>
+        <li><a href="">Вконтакте</a></li>
+        <li><a href="">Фейсбук</a></li>
+        <li><a href="">Инстаграм</a></li>
       </ul>
       <p>
         Давайте дружить, это выгодно!
