@@ -3,13 +3,16 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Нёрдс</title>
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=cyrillic-ext" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <h1 class="visually-hidden">Дизайн-студия Nerds</h1>
-    <header>
-      <nav>
-        <img src="img/index/nerds-logo.svg" width="160" height="65" alt="Логотип Нердс">
-        <ul>
+    <header class="header">
+      <nav class="main-navigation">
+        <a><img src="img/index/nerds-logo.svg" width="160" height="65" alt="Логотип Нердс"></a>
+        <ul class="site-navigation">
           <li><a href="">Студия</a></li>
           <li><a href="">Клиенты</a></li>
           <li><a href="catalog.html">Магазин</a></li>
@@ -17,21 +20,21 @@
         </ul>
         <a href="">Корзина</a>
       </nav>
-      <span>
+      <span class="advantage">
         Долго, дорого, скрупулезно.
       </span>
       <p>
         Математически выверенный дизайн
         для вашего сайта или мобильного приложения.
       </p>
-      <a href="">Узнать больше</a>
+      <a class="more button" href="">Узнать больше</a>
       <img src="img/index/slide1.png" width="698" height="413" alt="browser">
-      <button type="button"></button>
-      <button type="button"></button>
-      <button type="button"></button>
+      <button class="slide" type="button"></button>
+      <button class="slide" type="button"></button>
+      <button class="slide" type="button"></button>
     </header>
     <main>
-      <section>
+      <section class="offers">
         <h2 class="visually-hidden">
           Список предложений
         </h2>
@@ -42,7 +45,7 @@
               Веб-сайты
             </h3>
             Мир никогда не будет прежним после того как увидит ваш сайт!
-            <button type="button">ЗАКАЗАТЬ</button>
+            <button class="button button-web" type="button">Заказать</button>
           </li>
           <li>
             <img src="img/index/illustration-2.jpg" width="300" height="146" alt="Веб-сайты">
@@ -50,7 +53,7 @@
              Приложения
             </h3>
             Покорите топ-10 приложений в AppStore и Google Play
-            <button type="button">ЗАКАЗАТЬ</button>
+            <button class="button button-applications" type="button">Заказать</button>
           </li>
           <li>
             <img src="img/index/illustration-3.jpg" width="300" height="146" alt="Веб-сайты">
@@ -59,12 +62,12 @@
             </h3>
             Вы даже не подозреваете,
             насколько вы изумительны!
-            <button type="button">ЗАКАЗАТЬ</button>
+            <button class="button button-presentations" type="button">Заказать</button>
           </li>
         </ul>
       </section>
       <section>
-        <div>
+        <div class="features">
           <h2>
             Мы — маленькая, но гордая
             дизайн-студия из Краснодара.
@@ -72,8 +75,8 @@
           Исповедуем принципы минимализма и чистоты. Ставим математический расчет
           превыше креатива. Работаем не покладая рук, как роботы.
         </div>
-        <div>
-          Выполняем заказы на разработку:
+        <div class="features-list">
+          <span>Выполняем заказы на разработку:</span>
           <ul>
             <li>
               Веб-сайтов любой сложности
@@ -87,40 +90,42 @@
           </ul>
         </div>
         <img src="img/index/nerds-illustration.jpg" width="360" height="208" alt="Нердс-картинка">
-        <span>
-          с 2004 года Любим точность во всем:
-        </span>
-        <div>
-          <ul>
-            <li>
-              146<sup>%</sup>
-            </li>
-            <li>
-              Уровень
-              самоотдачи
-            </li>
-          </ul>
-          <ul>
-            <li>
-              100<sup>%</sup>
-            </li>
-            <li>
-              Соблюдение
-              сроков
-            </li>
-          </ul>
-          <ul>
-            <li>
-              50<sup>%</sup>
-            </li>
-            <li>
-              Минимальная
-              предоплата
-            </li>
-          </ul>
+        <div class="feature-item">
+          <span>
+            с 2004 года Любим точность во всем:
+          </span>
+          <div>
+            <ul>
+              <li>
+                146<sup>%</sup>
+              </li>
+              <li>
+                Уровень
+                самоотдачи
+              </li>
+            </ul>
+            <ul>
+              <li>
+                100<sup>%</sup>
+              </li>
+              <li>
+                Соблюдение
+                сроков
+              </li>
+            </ul>
+            <ul>
+              <li>
+                50<sup>%</sup>
+              </li>
+              <li>
+                Минимальная
+                предоплата
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
-      <ul>
+      <ul class="logos">
         <li>
           <img src="img/index/logo-1.png" width="199" height="68" alt="Логотип htmlacademy">
         </li>
@@ -134,7 +139,7 @@
           <img src="img/index/logo-4.png" width="173" height="84" alt="Логотип mishka">
         </li>
       </ul>
-      <section>
+      <section class="modal">
         <img src="img/index/map.jpg" width="1440" height="416" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
         <img src="img/index/map-marker.png" width="231" height="190" alt="Логотип Nerds">
         <article>
@@ -146,47 +151,47 @@
           <p>
             тел. +7 (812) 275-75-75
           </p>
-          <button type="button">Напишите нам</button>
+          <button class="button" type="button">Напишите нам</button>
         </article>
-        <div>
-          <h2>
-            Напишите нам
-          </h2>
-          <button type="button"><img src="img/index/close-cross.svg"></button>
-          <form action="https://echo.htmlacademy.ru" method="post">
-            <p>
-              <label for="s-name">Ваше имя:</label>
-              <input type="text" name="name" id="s-name" placeholder="Имя Фамилия">
-              <label for="email">Ваш e-mail:</label>
-              <input type="email" name="mail" id="email" placeholder="email@example.com">
-            </p>
-            <p>
-              <label for="t-lrtter">Текст письма:</label>
-              <textarea name="letter" id="t-lrtter" placeholder="В свободной форме" rows="5" cols="50"></textarea>
-            </p>
-            <button type="submit">ОТПРАВИТЬ</button>
-          </form>
-        </div>
       </section>
     </main>
-    <footer>
+    <footer class="main-footer">
       <ul>
         <li>
-          <a href="">Вконтакте</a>
+          <a class="social-button" href="">Вконтакте</a>
         </li>
         <li>
-          <a href="">Фейсбук</a>
+          <a class="social-button" href="">Фейсбук</a>
         </li>
         <li>
-          <a href="">Инстаграм</a>
+          <a class="social-button" href="">Инстаграм</a>
         </li>
       </ul>
-      <p>
+      <b>
         Давайте дружить, это выгодно!
-      </p>
+      </b>
       <p>
         Скидка 10% для друзей из социальных сетей.
       </p>
     </footer>
+    <div class="modal">
+      <h2>
+        Напишите нам
+      </h2>
+      <button class="clouse button" type="button"><img src="img/index/close-cross.svg"></button>
+      <form class="feedback" action="https://echo.htmlacademy.ru" method="post">
+        <p>
+          <label for="s-name">Ваше имя:</label>
+          <input type="text" name="name" id="s-name" placeholder="Имя Фамилия">
+          <label for="email">Ваш e-mail:</label>
+          <input type="email" name="mail" id="email" placeholder="email@example.com">
+        </p>
+        <p>
+          <label for="t-lrtter">Текст письма:</label>
+          <textarea name="letter" id="t-lrtter" placeholder="В свободной форме" rows="5" cols="50"></textarea>
+        </p>
+        <button class="button" type="submit">ОТПРАВИТЬ</button>
+      </form>
+    </div>
   </body>
 </html>

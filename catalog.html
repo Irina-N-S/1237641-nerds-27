@@ -3,17 +3,17 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Нёрдс</title>
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=cyrillic-ext" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <h1>
-      Магазин готовых шаблонов
-    </h1>
-    <header>
-      <nav>
-        <a href="/index.html">
+    <header class="header">
+      <nav class="main-navigation">
+        <a href="index.html">
         <img src="img/index/nerds-logo.svg" width="160" height="65" alt="Логотип Нердс">
         </a>
-        <ul>
+        <ul class="site-navigation">
           <li><a href="">Студия</a></li>
           <li><a href="">Клиенты</a></li>
           <li><a>Магазин</a></li>
@@ -21,96 +21,99 @@
         </ul>
         <a href="">Корзина</a>
       </nav>
+      <h1>
+        Магазин готовых шаблонов
+      </h1>
     </header>
     <main>
       <h2 class="visually-hidden">Нердс</h2>
-      <section>
+      <section class="offers">
         <form action="https://echo.htmlacademy.ru" method="post">
         <h2 class="visually-hidden">Фильтры</h2>
         <fieldset>
-          <legend>Сортировать:</legend>
+          <legend class="sorting">Сортировать:</legend>
           <ul>
-            <li><a href="">По цене</a></li>
-            <li><a href="">По типу</a></li>
-            <li><a href="">По названию</a></li>
+            <li><a class="sorting-item current" href="">По цене</a></li>
+            <li><a class="sorting-item current" href="">По типу</a></li>
+            <li><a  class="sorting-item current"href="">По названию</a></li>
           </ul>
           <span>
             <ul>
-              <li><a href=""><img src="img/index/icon-down-dir.svg" width="11" height="10"></a></li>
-              <li><a href=""><img src="img/index/icon-up-dir.svg" width="11" height="10"></a></li>
+              <li><a class="sorting-item" href=""><img src="img/index/icon-down-dir.svg" width="11" height="10"></a></li>
+              <li><a class="sorting-item" href=""><img src="img/index/icon-up-dir.svg" width="11" height="10"></a></li>
             </ul>
           </span>
         </fieldset>
         <fieldset>
-          <legend>СТОИМОСТЬ:</legend>
+          <legend class="filter">СТОИМОСТЬ:</legend>
           <div>
             <button type="button"></button>
             <button type="button"></button>
           </div>
-          <label for="id-from">ОТ</label>
+          <label class="rang" for="id-from">ОТ</label>
           <input type="text" name="from" id="id-from" value="0">
-          <label for="id-before">ДО</label>
+          <label class="rang" for="id-before">ДО</label>
           <input type="text" name="before" id="id-before" value="15 000">
         </fieldset>
         <fieldset>
-          <legend>Сетка:</legend>
+          <legend class="filter">Сетка:</legend>
           <ul>
             <li>
               <input type="radio" name="grid" value="adaptive" id="a-grid" checked>
-              <label for="a-grid">Адаптивная</label>
+              <label class="filter-item" for="a-grid">Адаптивная</label>
             </li>
             <li>
               <input type="radio" name="grid" value="fixed" id="f-grid">
-              <label for="f-grid">Фиксированная</label>
+              <label class="filter-item" for="f-grid">Фиксированная</label>
             </li>
             <li>
               <input type="radio" name="grid" value="rubber" id="r-grid">
-              <label for="r-grid">Резиновая</label>
+              <label class="filter-item" for="r-grid">Резиновая</label>
             </li>
           </ul>
         </fieldset>
         <fieldset>
-          <legend>ОСОБЕННОСТИ:</legend>
+          <legend class="filter">ОСОБЕННОСТИ:</legend>
           <ul>
             <li>
               <input type="checkbox" name="slider" id="id-slider" checked>
-              <label for="id-slider">Слайдер</label>
+              <label class="filter-item" for="id-slider">Слайдер</label>
             </li>
             <li>
               <input type="checkbox" name="advantage" id="id-advantage">
-              <label for="id-advantage">Блок преимуществ</label>
+              <label class="filter-item" for="id-advantage">Блок преимуществ</label>
             </li>
             <li>
               <input type="checkbox" name="news" id="id-news" checked>
-              <label for="id-news">Новости</label>
+              <label class="filter-item" for="id-news">Новости</label>
             </li>
             <li>
               <input type="checkbox" name="gallery" id="id-gallery">
-              <label for="id-gallery">Галерея</label>
+              <label class="filter-item" for="id-gallery">Галерея</label>
             </li>
             <li>
               <input type="checkbox" name="basket" id="id-basket">
-              <label for="id-basket">Корзина</label>
+              <label class="filter-item" for="id-basket">Корзина</label>
             </li>
           </ul>
         </fieldset>
-        <button type="submit">Показать</button>
+        <button class="button button-filter" type="submit">Показать</button>
         </form>
       </section>
-      <section>
+      <section class="offers">
         <h2 class="visually-hidden">Список шаблонов</h2>
         <ul>
           <li>
               <img src="img/catalog/img-sedona.jpg" width="360" height="576" alt="Шаблон SEDONA">
             <div>
               <h3>
-                <a href="">Sedona</a>
+                <a class="name-websit" href="">Sedona</a>
               </h3>
               <p>
               Информационный сайт
               для туристов
               </p>
-              <span>9 900 руб.</span>
+              <span class="button price">9 900 руб.</span>
             </div>
           </li>
           <li>
@@ -129,14 +132,14 @@
             <img src="img/catalog/img-kvast.jpg" width="360" height="576" alt="Шаблон Kvast">
           </li>
         </ul>
-        <ol>
-          <li><a>1</a></li>
-          <li><a href="">2</a></li>
-          <li><a href="">3</a></li>
-          <li><a href="">Следующая</a></li>
-        </ol>
+        <ul>
+          <li><a class="page">1</a></li>
+          <li><a class="page" href="">2</a></li>
+          <li><a class="page" href="">3</a></li>
+          <li><a class="page" href="">Следующая</a></li>
+        </ul>
       </section>
-      <section>
+      <section class="modal">
         <img src="img/index/map.jpg" width="1440" height="416" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
         <img src="img/index/map-marker.png" width="231" height="190" alt="Логотип Nerds">
         <article>
@@ -148,41 +151,41 @@
           <p>
             тел. +7 (812) 275-75-75
           </p>
-          <button type="button">Напишите нам</button>
+          <button class="button" type="button">Напишите нам</button>
         </article>
-        <div>
-          <h2>
-            Напишите нам
-          </h2>
-          <button type="button"><img src="img/index/close-cross.svg" width="21" height="21"></button>
-          <form action="https://echo.htmlacademy.ru" method="post">
-            <p>
-              <label for="s-name">Ваше имя:</label>
-              <input type="text" name="name" id="s-name" placeholder="Имя Фамилия">
-              <label for="email">Ваш e-mail:</label>
-              <input type="email" name="mail" id="email" placeholder="email@example.com">
-            </p>
-            <p>
-              <label for="t-lrtter">Текст письма:</label>
-              <textarea name="letter" id="t-lrtter" placeholder="В свободной форме" rows="5" cols="50"></textarea>
-            </p>
-            <button type="submit">Отправить</button>
-          </form>
-        </div>
       </section>
     </main>
-    <footer>
+    <footer class="main-footer">
       <ul>
-        <li><a href="">Вконтакте</a></li>
-        <li><a href="">Фейсбук</a></li>
-        <li><a href="">Инстаграм</a></li>
+        <li><a class="social-button" href="">Вконтакте</a></li>
+        <li><a class="social-button" href="">Фейсбук</a></li>
+        <li><a class="social-button" href="">Инстаграм</a></li>
       </ul>
-      <p>
+      <b>
         Давайте дружить, это выгодно!
-      </p>
+      </b>
       <p>
         Скидка 10% для друзей из социальных сетей.
       </p>
     </footer>
+    <div class="modal">
+      <h2>
+        Напишите нам
+      </h2>
+      <button class="clouse button" type="button"><img src="img/index/close-cross.svg"></button>
+      <form class="feedback" action="https://echo.htmlacademy.ru" method="post">
+        <p>
+          <label for="s-name">Ваше имя:</label>
+          <input type="text" name="name" id="s-name" placeholder="Имя Фамилия">
+          <label for="email">Ваш e-mail:</label>
+          <input type="email" name="mail" id="email" placeholder="email@example.com">
+        </p>
+        <p>
+          <label for="t-lrtter">Текст письма:</label>
+          <textarea name="letter" id="t-lrtter" placeholder="В свободной форме" rows="5" cols="50"></textarea>
+        </p>
+        <button class="button" type="submit">ОТПРАВИТЬ</button>
+      </form>
+    </div>
   </body>
 </html>
