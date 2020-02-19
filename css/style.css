@@ -4,15 +4,22 @@ body {
   font-family: "Roboto", Arial, sans-serif;
   font-size: 16px;
   line-height: 24px;
-  color: #000000;
+  color: #283136;
   font-weight: normal;
 }
 a {
   text-decoration: none;
-  color: black;
+  color: #000000;
 }
 h1 {
   text-align: center;
+  color: #000000;
+}
+h2 {
+  font-size: 45px;
+  line-height: 45px;
+  font-weight: 500;
+  color: #000000;
 }
 .button {
   font: inherit;
@@ -21,7 +28,7 @@ h1 {
   font-weight: 500;
   text-transform: uppercase;
   background: #fb565a;
-  vertical-align: center;
+  vertical-align: middle;
   border: none;
 }
 .button:hover,
@@ -47,6 +54,8 @@ fieldset {
 .main-navigation {
   line-height: 30px;
   text-transform: uppercase;
+  font-weight: 500;
+  color: #000000;
 }
 .button-filter {
   background: #eeeeee;
@@ -61,6 +70,7 @@ fieldset {
   line-height: 18px;
   background: #eeeeee;
   border: solid 3px #dbdbdb;
+  color: #000000;
 }
 .page:hover,
 .page:focus {
@@ -70,8 +80,13 @@ fieldset {
 .price:focus {
   background: #e74246;
 }
+.site-navigation a:active,
+.main-navigation :last-child:active {
+  color: rgba(0, 0, 0, 0.3);
+}
 .site-navigation,
 .offers ul,
+.feature,
 .features-list ul,
 .feature-item ul,
 .logos,
@@ -88,27 +103,19 @@ fieldset {
   font-size: 18px;
   line-height: 18px;
   font-weight: bold;
+  color: #000000;
 }
 .advantage {
   font-size: 55px;
   line-height: 55px;
   font-weight: 500;
-}
-.more {
-  font: inherit;
-  line-height: 18px;
-  font-weight: 500;
-  color: #ffffff;
-  background-color: #fb565a;
-  text-transform: uppercase;
+  color: #000000;
 }
 .rang {
   line-height: 22px;
-  color: #283136;
 }
 .filter-item {
   line-height: 20px;
-  color: #283136;
 }
 .more:hover,
 .more:focus,
@@ -124,7 +131,7 @@ fieldset {
 }
 .sorting-item:hover,
 .sorting-item:focus {
-  color: #dfdfdf;
+  color: rgba(0, 0, 0, 0.6);
 }
 .button-applications:hover,
 .button-applications:focus {
@@ -139,6 +146,7 @@ fieldset {
   line-height: 30px;
   text-transform: uppercase;
   font-weight: bold;
+  color: #000000;
 }
 .slide {
   background: transparent;
@@ -149,23 +157,18 @@ fieldset {
 .button-presentations {
   background: #efc84a;
 }
-
-h2 {
-  font-size: 45px;
-  line-height: 45px;
-  font-weight: 500;
-}
 .features-list span,
 .feature-item span {
   font-weight: bold;
   text-transform: uppercase;
+  color: #000000;
 }
 .feature-item li:first-child {
   font-weight: bold;
   font-size: 45px;
-  line-height: 10px;
+  line-height: 45px;
+  color: #000000;
 }
-.feature-item li:nth-child(2n),
 .modal {
   line-height: 18px;
 }
@@ -175,6 +178,7 @@ h2 {
   font-size: 18px;
   line-height: 30px;
   font-weight: bold;
+  color: #000000;
 }
 .clouse {
   background: #ffffff;
@@ -188,6 +192,7 @@ h2 {
   font: inherit;
   line-height: 18px;
   font-weight: bold;
+  color: #000000;
 }
 .feedback input:focus {
   border: solid 2px #000000;
@@ -196,6 +201,7 @@ h2 {
   font-size: 36px;
   line-height: 36px;
   font-weight: bold;
+  color: #000000;
 }
 .main-footer p {
   line-height: 22px;
