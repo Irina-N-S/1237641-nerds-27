@@ -81,7 +81,7 @@ fieldset {
   background: #e74246;
 }
 .site-navigation a:active,
-.main-navigation :last-child:active {
+.cart:active {
   color: rgba(0, 0, 0, 0.3);
 }
 .site-navigation,
@@ -180,7 +180,7 @@ fieldset {
   font-weight: bold;
   color: #000000;
 }
-.clouse {
+.close {
   background: #ffffff;
 }
 .offers p {
