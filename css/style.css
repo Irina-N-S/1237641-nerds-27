@@ -56,6 +56,29 @@ fieldset {
   text-transform: uppercase;
   font-weight: 500;
   color: #000000;
+  margin-bottom: 18px;
+  margin-left: 140px;
+  margin-right: 140px;
+  padding-top: 49px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.site-navigation {
+  display: flex;
+  justify-content: space-around;
+}
+/*.slides {
+ float: right;
+}*/
+.offers {
+  display: flex;
+  margin-left: 140px;
+  margin-top: 80px;
+}
+.offers-card {
+  width: 300px;
+  margin-right: 100px;
 }
 .button-filter {
   background: #eeeeee;
@@ -71,6 +94,14 @@ fieldset {
   background: #eeeeee;
   border: solid 3px #dbdbdb;
   color: #000000;
+}
+.line {
+  margin-top:80px;
+  margin-right: 140px;
+  margin-bottom: 80px;
+  margin-left: 140px;
+  border-top:2px solid #666666;
+  height:100%;
 }
 .page:hover,
 .page:focus {
