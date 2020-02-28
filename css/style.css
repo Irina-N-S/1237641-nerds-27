@@ -67,13 +67,22 @@ fieldset {
 .site-navigation {
   display: flex;
   justify-content: space-around;
+  width: 600px;
+  flex-wrap: wrap;
 }
-/*.slides {
- float: right;
-}*/
+
+.site-navigation a {
+  margin: 0 22px;
+}
+
+.slides {
+  float: right;
+  width: 60%;
+}
 .offers {
   display: flex;
   margin-left: 140px;
+  margin-right: 200px;
   margin-top: 80px;
 }
 .offers-card {
@@ -100,7 +109,9 @@ fieldset {
   margin-right: 140px;
   margin-bottom: 80px;
   margin-left: 140px;
-  border-top:2px solid #666666;
+  border-top:2px solid #eeeeee
+
+;
   height:100%;
 }
 .page:hover,
@@ -117,12 +128,14 @@ fieldset {
 }
 .site-navigation,
 .offers ul,
-.feature,
 .features-list ul,
 .feature-item ul,
 .logos,
 .main-footer ul {
   list-style: none;
+}
+.features {
+  display: flex;
 }
 .main-navigation a:hover,
 .main-navigation a:focus,
@@ -137,6 +150,12 @@ fieldset {
   color: #000000;
 }
 .advantage {
+  float: left;
+  width: 376px;
+  padding-top: 49px;
+  margin-left: 140px;
+}
+.advantage span {
   font-size: 55px;
   line-height: 55px;
   font-weight: 500;
@@ -227,6 +246,9 @@ fieldset {
 }
 .feedback input:focus {
   border: solid 2px #000000;
+}
+.main-footer {
+  display: flex;
 }
 .main-footer b {
   font-size: 36px;
