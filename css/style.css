@@ -21,6 +21,9 @@ h2 {
   font-weight: 500;
   color: #000000;
 }
+.centering {
+  margin: 0 140px;
+}
 .button {
   font: inherit;
   line-height: 18px;
@@ -30,6 +33,9 @@ h2 {
   background: #fb565a;
   vertical-align: middle;
   border: none;
+  text-align: center;
+  padding-top: 19px;
+  padding-bottom: 18px;
 }
 .button:hover,
 .button:focus {
@@ -48,8 +54,14 @@ h2 {
 .header {
   background-color: #eeeeee;
 }
-fieldset {
+/*
+.fieldset {
   border: none;
+}
+*/
+.header h1 {
+  padding-bottom: 116px;
+  padding-top: 82px;
 }
 .main-navigation {
   line-height: 30px;
@@ -57,8 +69,6 @@ fieldset {
   font-weight: 500;
   color: #000000;
   margin-bottom: 18px;
-  margin-left: 140px;
-  margin-right: 140px;
   padding-top: 49px;
   display: flex;
   justify-content: space-between;
@@ -69,25 +79,59 @@ fieldset {
   justify-content: space-around;
   width: 600px;
   flex-wrap: wrap;
+  margin-left: 200px;
+  margin-right: 245px;
 }
 
 .site-navigation a {
   margin: 0 22px;
 }
-
+.advantage-slides {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  margin-right: 31px;
+}
+.advantage {
+  display: flex;
+  flex-direction: column;
+  width: 378px;
+  padding-top: 49px;
+  margin-right: 110px;
+}
 .slides {
-  float: right;
-  width: 60%;
+  width: 700px;
+  position: relative;
+}
+.advantage p {
+  padding-top: 28px;
+  padding-bottom: 42px;
+}
+.more {
+  width: 240px;
+  text-align: center;
+  padding-top: 19px;
+  padding-bottom: 18px;
+}
+.slide {
+  background: transparent;
+  position: absolute;
 }
 .offers {
   display: flex;
-  margin-left: 140px;
-  margin-right: 200px;
   margin-top: 80px;
 }
 .offers-card {
   width: 300px;
-  margin-right: 100px;
+  margin-right: 129px;
+}
+.offers-card p {
+  margin: 26px 0;
+  width: 245px;
+}
+.button-card {
+  width: 160px;
 }
 .button-filter {
   background: #eeeeee;
@@ -105,14 +149,20 @@ fieldset {
   color: #000000;
 }
 .line {
-  margin-top:80px;
-  margin-right: 140px;
-  margin-bottom: 80px;
-  margin-left: 140px;
-  border-top:2px solid #eeeeee
-
-;
+  border-top:2px solid #eeeeee;
   height:100%;
+}
+.line-1 {
+  margin-top:80px;
+  margin-bottom: 80px;
+}
+.line-2 {
+  margin-top:76px;
+  margin-bottom: 64px;
+}
+.line-3 {
+  margin-top: 64px;
+  margin-bottom: 80px;
 }
 .page:hover,
 .page:focus {
@@ -134,8 +184,47 @@ fieldset {
 .main-footer ul {
   list-style: none;
 }
+.feature-item ul {
+  padding-left: 0;
+}
 .features {
   display: flex;
+  justify-content: space-between;
+}
+.description {
+  width: 650px;
+}
+.description p {
+  margin-top: 35px;
+  margin-bottom: 47px;
+}
+.features-list li {
+  margin-top: 30px;
+}
+/*
+.features-list li:before {
+  content: "";
+  border-top:2px solid #fb565a;
+  width: 25px;
+}
+*/
+.logo-item {
+  width: 360px;
+}
+.feature-item {
+  display: flex;
+  flex-direction: column;
+}
+.feature-item span {
+  margin-top: 41px;
+  margin-bottom: 49px;
+  text-align: center;
+}
+.interest {
+  display: flex;
+}
+.interest-item {
+  margin-right: 26px;
 }
 .main-navigation a:hover,
 .main-navigation a:focus,
@@ -149,17 +238,21 @@ fieldset {
   font-weight: bold;
   color: #000000;
 }
-.advantage {
-  float: left;
-  width: 376px;
-  padding-top: 49px;
-  margin-left: 140px;
-}
 .advantage span {
   font-size: 55px;
   line-height: 55px;
   font-weight: 500;
   color: #000000;
+}
+.logos {
+  display: flex;
+  justify-content: center;
+  margin-left: 31px;
+  margin-top: 62px;
+  margin-bottom: 50px;
+}
+.logos li {
+  margin-right: 96px;
 }
 .rang {
   line-height: 22px;
@@ -198,9 +291,6 @@ fieldset {
   font-weight: bold;
   color: #000000;
 }
-.slide {
-  background: transparent;
-}
 .button-applications {
   background: #00ca74;
 }
@@ -221,14 +311,40 @@ fieldset {
 }
 .modal {
   line-height: 18px;
+  position: relative;
 }
-.modal h3,
+.contact {
+  position: absolute;
+  left: 140px;
+  top: 54px;
+  background-color: white;
+  width: 220px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 47px;
+  padding-top: 54px;
+}
+.address {
+  margin-bottom: 37px;
+  width: 205px;
+}
+
+.button-address {
+  width: 219px;
+}
+.logo-small {
+  position: absolute;
+  right: 448px;
+  top: 89px;
+}
+.pop-up h3,
 .filter {
   font: inherit;
   font-size: 18px;
   line-height: 30px;
   font-weight: bold;
   color: #000000;
+  margin: 0;
 }
 .close {
   background: #ffffff;
@@ -249,6 +365,15 @@ fieldset {
 }
 .main-footer {
   display: flex;
+  margin-top: 69px;
+  margin-bottom: 69px;
+}
+.main-footer ul {
+  display: flex;
+  margin-right: 139px;
+}
+.main-footer li {
+  margin-right: 12px;
 }
 .main-footer b {
   font-size: 36px;
