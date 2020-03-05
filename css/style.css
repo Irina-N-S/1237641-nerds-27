@@ -21,6 +21,10 @@ h2 {
   font-weight: 500;
   color: #000000;
 }
+img {
+  max-width: 100%;
+  height: auto;
+}
 .centering {
   margin: 0 140px;
 }
@@ -115,14 +119,25 @@ fieldset {
 .slide {
   background: transparent;
   position: absolute;
+  left: 100px;
+  bottom: 100px;
+  display: flex;
+}
+.slide-button{
+  margin-right: 17px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: #ffffff;
 }
 .offers {
   display: flex;
+  flex-wrap: wrap;
   margin-top: 80px;
 }
 .offers-card {
   width: 300px;
-  margin-right: 129px;
+  margin-right: 100px;
 }
 .offers-card p {
   margin: 26px 0;
@@ -154,14 +169,12 @@ fieldset {
 }
 .line-1 {
   margin-top:80px;
-  margin-bottom: 80px;
 }
 .line-2 {
   margin-top:76px;
-  margin-bottom: 64px;
+  margin-bottom: 46px;
 }
 .line-3 {
-  margin-top: 64px;
   margin-bottom: 80px;
 }
 .page:hover,
@@ -181,7 +194,8 @@ fieldset {
 .interest-item,
 .logos,
 .main-footer ul,
-.sorting-templates ul {
+.sorting-templates ul,
+.cart {
   list-style: none;
 }
 .feature-item ul {
@@ -190,9 +204,14 @@ fieldset {
 .features {
   display: flex;
   justify-content: space-between;
+  margin-top: 40px;
 }
 .description {
   width: 650px;
+  margin-top: 40px;
+}
+.description h2 {
+  margin: 0;
 }
 .description p {
   margin-top: 35px;
@@ -217,7 +236,11 @@ fieldset {
   display: flex;
 }
 .interest-item {
+  margin: 0;
   margin-right: 26px;
+}
+.interest-item li:last-child {
+  margin-top: 20px;
 }
 .main-navigation a:hover,
 .main-navigation a:focus,
@@ -243,11 +266,28 @@ fieldset {
   display: flex;
   justify-content: center;
   margin-left: 31px;
-  margin-top: 62px;
-  margin-bottom: 50px;
+  margin-top: 46px;
+  margin-bottom: 44px;
+  padding: 0;
 }
-.logos li {
+.htmlacademy {
   margin-right: 96px;
+  width: 199px;
+}
+.borodinski {
+  margin-right: 103px;
+  width: 209px;
+}
+.pink {
+  margin-right: 121px;
+  width: 185px;
+}
+.mishka {
+  width: 173px;
+}
+.logo::after {
+  content: "";
+  border-left: 2px solid #eeeeee;
 }
 .rang {
   line-height: 22px;
@@ -319,6 +359,9 @@ fieldset {
   padding-bottom: 47px;
   padding-top: 54px;
 }
+.contact h3 {
+  margin: 0;
+}
 .address {
   margin-bottom: 37px;
   width: 205px;
@@ -367,6 +410,7 @@ fieldset {
 .main-footer ul {
   display: flex;
   margin-right: 139px;
+  padding: 0;
 }
 .main-footer li {
   margin-right: 12px;
@@ -388,6 +432,22 @@ fieldset {
 .social-button {
   color: white;
   background: #e1e1e1;
+  display: block;
+  width: 79px;
+  height: 79px;
+  border-radius: 50%;
+}
+.vk {
+  background-image: url("../img/index/vk-icon.svg");
+  background-repeat: no-repeat;
+}
+.facebook {
+  background-image: url("../img/index/fb-icon.svg");
+  background-repeat: no-repeat;
+}
+.instagram {
+  background-image: url("../img/index/insta-icon.svg");
+  background-repeat: no-repeat;
 }
 .patterns-sorting {
   display: flex;
@@ -454,4 +514,27 @@ fieldset {
   display: block;
   width: 260px;
   height: 50px;
+}
+.cart-link {
+  padding-left: 41px;
+  position: relative;
+  display: block;
+}
+.cart-link::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 7px;
+  left: 10px;
+  background-image: url("../img/index/cart-icon.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+.addition {
+  margin-top: 9px;
+}
+.addition p {
+  margin: 0;
+  margin-top: 12px;
 }

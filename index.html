@@ -19,7 +19,9 @@
             <a href="catalog.html">Магазин</a>
             <a href="">Контакты</a>
           </div>
-          <a class="cart" href="">Корзина</a>
+          <ul class="cart">
+            <li><a class="cart-link" href="">Корзина</a></li>
+          </ul>
         </nav>
         <div class="advantage-slides">
           <div class="advantage">
@@ -34,19 +36,21 @@
           </div>
           <div class="slides">
             <img src="img/index/slide1.png" width="698" height="413" alt="browser" />
-            <button class="slide" type="button"></button>
-            <button class="slide" type="button"></button>
-            <button class="slide" type="button"></button>
+            <div class="slide">
+              <button class="slide-button" type="button"></button>
+              <button class="slide-button" type="button"></button>
+              <button class="slide-button" type="button"></button>
+            </div>
           </div>
         </div>
       </div>
     </header>
     <main>
       <div class="centering">
+        <h2 class="visually-hidden">
+          Список предложений
+        </h2>
         <section class="offers">
-          <h2 class="visually-hidden">
-            Список предложений
-          </h2>
           <div class="offers-card">
             <img src="img/index/illustration-1.jpg" width="300" height="146" alt="Веб-сайты">
             <h3>
@@ -146,16 +150,16 @@
         <div class="line line-2"></div>
         <ul class="logos">
           <li>
-            <img src="img/index/logo-1.png" width="199" height="68" alt="Логотип htmlacademy">
+            <img class="logo htmlacademy" src="img/index/logo-1.png" width="199" height="68" alt="Логотип htmlacademy">
           </li>
           <li>
-            <img src="img/index/logo-2.jpg" width="209" height="87" alt="Логотип borodinski">
+            <img class="logo borodinski" src="img/index/logo-2.jpg" width="209" height="87" alt="Логотип borodinski">
           </li>
           <li>
-            <img src="img/index/logo-3.png" width="185" height="52" alt="Логотип pink">
+            <img class="logo pink" src="img/index/logo-3.png" width="185" height="52" alt="Логотип pink">
           </li>
           <li>
-            <img src="img/index/logo-4.png" width="173" height="84" alt="Логотип mishka">
+            <img class="logo mishka" src="img/index/logo-4.png" width="173" height="84" alt="Логотип mishka">
           </li>
         </ul>
         <div class="line line-3"></div>
@@ -183,13 +187,13 @@
     <footer class="main-footer centering">
       <ul>
         <li>
-          <a class="social-button" href="">Вконтакте</a>
+          <a class="social-button vk" href=""></a>
         </li>
         <li>
-          <a class="social-button" href="">Фейсбук</a>
+          <a class="social-button facebook" href=""></a>
         </li>
         <li>
-          <a class="social-button" href="">Инстаграм</a>
+          <a class="social-button instagram" href=""></a>
         </li>
       </ul>
       <div class="addition">
