@@ -62,6 +62,7 @@ fieldset {
   border: none;
 }
 .header h1 {
+  margin: 0;
   padding-bottom: 116px;
   padding-top: 82px;
 }
@@ -70,7 +71,6 @@ fieldset {
   text-transform: uppercase;
   font-weight: 500;
   color: #000000;
-  margin-bottom: 18px;
   padding-top: 49px;
   display: flex;
   justify-content: space-between;
@@ -83,8 +83,8 @@ fieldset {
   flex-wrap: wrap;
   margin-left: 200px;
   margin-right: 245px;
+  padding: 0;
 }
-
 .site-navigation a {
   margin: 0 22px;
 }
@@ -92,6 +92,7 @@ fieldset {
   display: flex;
   justify-content: space-between;
   margin-bottom: 0;
+  margin-top: 18px;
   padding-bottom: 0;
   margin-right: 31px;
 }
@@ -149,7 +150,6 @@ fieldset {
 .button-filter {
   background: #eeeeee;
   color: #000000;
-  margin-top: 40px;
 }
 .button-filter:hover,
 .button-filter:focus {
@@ -195,7 +195,8 @@ fieldset {
 .logos,
 .main-footer ul,
 .sorting-templates ul,
-.cart {
+.cart,
+.form-filters ul {
   list-style: none;
 }
 .feature-item ul {
@@ -254,7 +255,10 @@ fieldset {
   font-weight: bold;
   color: #000000;
   width: 360px;
+  margin: 0;
   margin-right: 40px;
+  text-transform: uppercase;
+  vertical-align: top;
 }
 .advantage span {
   font-size: 55px;
@@ -289,9 +293,11 @@ fieldset {
   content: "";
   border-left: 2px solid #eeeeee;
 }
+/*
 .rang {
   line-height: 22px;
 }
+*/
 .filter-item {
   line-height: 20px;
 }
@@ -449,6 +455,13 @@ fieldset {
   background-image: url("../img/index/insta-icon.svg");
   background-repeat: no-repeat;
 }
+.logo::after {
+  content: "";
+  border-left: 2px solid #eeeeee;
+  display: block;
+  width: 100px;
+  height: 20px;
+}
 .patterns-sorting {
   display: flex;
   margin-top: 60px;
@@ -461,11 +474,25 @@ fieldset {
   display: flex;
   flex-direction: column;
 }
+/*
 .cost {
   margin-bottom: 52px;
 }
+*/
 .grid {
-  margin-bottom: 45px;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 50px;
+}
+.filter {
+  margin-bottom: 21px;
+}
+.grid ul{
+  padding: 0;
+  margin: 0;
+}
+.grid li {
+  margin-bottom: 15px;
 }
 .sorting-templates {
   display: flex;
@@ -474,9 +501,12 @@ fieldset {
 }
 .sorting {
   display: flex;
+  margin-bottom: 56px;
 }
 .sort {
   display: flex;
+  margin: 0;
+  padding: 0;
 }
 .sort li {
   margin-right: 26px;
@@ -489,14 +519,45 @@ fieldset {
 .patterns {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   padding: 0;
+  margin: 0;
+}
+.patterns li:first-child {
+  position: relative;
 }
 .patterns li {
   width: 360px;
+  margin-bottom: 30px;
+}
+.patterns-info {
+  position: absolute;
+  width: 360px;
+  top: 320px;
+  background-color: white;
+}
+.patterns-info h3 {
+  margin: 0;
+  margin-top: 71px;
+  margin-bottom: 25px;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #ffffff;
 }
 .patterns li:nth-child(odd) {
   margin-right: 40px;
+}
+.definition {
+  margin: 0;
+  width: 176px;
+  text-align: center;
+}
+.price {
+  display: block;
+  width: 200px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 30px;
+  margin-bottom: 43px;
 }
 .pages {
   display: flex;
@@ -537,4 +598,82 @@ fieldset {
 .addition p {
   margin: 0;
   margin-top: 12px;
+}
+.filter-item {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 60px;
+  border: none;
+}
+.range-filter {
+  width: 260px;
+  margin-top: 56px;
+}
+.filter-item legend {
+  font-size: 18px;
+  line-height: 24px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.range-controls {
+  position: relative;
+  height: 41px;
+  margin-bottom: 15px;
+  padding-top: 39px;
+  padding-right: 20px;
+  padding-left: 20px;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+}
+.range-controls .scale {
+  height: 2px;
+  background: #d7dcde;
+}
+.range-controls .bar {
+  width: 70%;
+  height: 2px;
+  background: #00ca74;
+}
+.range-controls .toggle {
+  position: absolute;
+  top: 31px;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  padding: 0;
+  border: 8px solid #ffffff;
+  background-color: #ababab;
+  box-shadow: 0 2px 1px 0 #cfcfcf;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.range-controls .toggle-min {
+  left: 0px;
+}
+.range-controls .toggle-max {
+  left: 160px;
+}
+.price-controls {
+  font-size: 0;
+}
+.price-controls label {
+  display: inline-block;
+  width: 50%;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+.price-controls input {
+  width: 60px;
+  padding: 8px 10px;
+  margin-left: 10px;
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 16px;
+  text-align: center;
+  color: #283136;
+  border: none;
+  border-radius: 5px;
+  background: #f1f1f1;
+}
+.max-price {
+  text-align: right;
 }
