@@ -27,7 +27,7 @@ img {
 }
 .container {
   margin: 0 auto;
-  width: 1200px;
+  width: 1240px;
   padding: 0 20px;
   box-sizing: border-box;
 }
@@ -93,7 +93,6 @@ fieldset {
 }
 .advantage-slides {
   display: flex;
-  justify-content: space-between;
   margin-bottom: 0;
   margin-top: 18px;
   padding-bottom: 0;
@@ -102,15 +101,16 @@ fieldset {
 .advantage {
   display: flex;
   flex-direction: column;
-  width: 378px;
-  padding-top: 49px;
-  margin-right: 110px;
+  width: 412px;
+  padding-top: 67px;
+  margin-right: 55px;
 }
 .slides {
   width: 700px;
   position: relative;
 }
 .advantage p {
+  margin: 0;
   padding-top: 28px;
   padding-bottom: 42px;
 }
@@ -133,6 +133,7 @@ fieldset {
   height: 18px;
   border-radius: 50%;
   background-color: #ffffff;
+  border: 0;
 }
 .offers {
   display: flex;
@@ -223,6 +224,10 @@ fieldset {
 }
 .features-list li {
   margin-top: 30px;
+}
+.features-list li::before {
+  content: "";
+  border-top: 2px solid #fb565a;
 }
 .logo-item {
   width: 360px;
@@ -381,8 +386,8 @@ fieldset {
 }
 .logo-small {
   position: absolute;
-  right: 448px;
-  top: 89px;
+  right: 353px;
+  top: 70px;
 }
 .pop-up h3,
 .filter {
@@ -441,6 +446,7 @@ fieldset {
 .social-button {
   color: white;
   background: #e1e1e1;
+  background-position: center;
   display: block;
   width: 79px;
   height: 79px;
@@ -534,9 +540,10 @@ fieldset {
 }
 .patterns-info {
   position: absolute;
+  bottom: 0;
   width: 360px;
   top: 320px;
-  background-color: white;
+  background-color: #eeeeee;
 }
 .patterns-info h3 {
   margin: 0;
@@ -544,14 +551,13 @@ fieldset {
   margin-bottom: 25px;
   text-align: center;
   text-transform: uppercase;
-  background-color: #ffffff;
 }
 .patterns li:nth-child(odd) {
   margin-right: 40px;
 }
 .definition {
-  margin: 0;
-  width: 176px;
+  margin: 0 auto;
+  width: 177px;
   text-align: center;
 }
 .price {
