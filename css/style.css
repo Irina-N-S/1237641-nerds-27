@@ -199,9 +199,33 @@ fieldset {
 .logos,
 .main-footer ul,
 .sorting-templates ul,
-.cart,
 .form-filters ul {
   list-style: none;
+}
+.filter-design li {
+  padding-left: 36px;
+  position: relative;
+}
+.up-down {
+  display: flex;
+}
+.down {
+  margin-right: 18px;
+}
+.filter-item input[type="checkbox"] + .checkbox-indicator {
+  position: absolute;
+  top: -4px;
+  left: -36px;
+
+  width: 23px;
+  height: 23px;
+
+  border: 2px solid #4d4d4d;
+  opacity: 0.4;
+  cursor: pointer;
+}
+.filter-item input[type="checkbox"]:focus + .checkbox-indicator {
+  opacity: 1;
 }
 .feature-item ul {
   padding-left: 0;
@@ -222,12 +246,21 @@ fieldset {
   margin-top: 35px;
   margin-bottom: 47px;
 }
+.features-list ul {
+  padding: 0;
+  padding-left: 38px;
+}
 .features-list li {
   margin-top: 30px;
+  position: relative;
 }
 .features-list li::before {
   content: "";
-  border-top: 2px solid #fb565a;
+  outline: 2px solid #fb565a;
+  position: absolute;
+  width: 25px;
+  left: -34px;
+  top: 11px;
 }
 .logo-item {
   width: 360px;
@@ -300,14 +333,6 @@ fieldset {
 .logo::after {
   content: "";
   border-left: 2px solid #eeeeee;
-}
-/*
-.rang {
-  line-height: 22px;
-}
-*/
-.filter-item {
-  line-height: 20px;
 }
 .more:hover,
 .more:focus,
@@ -609,10 +634,13 @@ fieldset {
   margin-top: 12px;
 }
 .filter-item {
+  line-height: 20px;
   margin: 0;
   padding: 0;
   margin-bottom: 60px;
   border: none;
+  position: relative;
+  cursor: pointer;
 }
 .range-filter {
   width: 260px;

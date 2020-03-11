@@ -20,9 +20,7 @@
             <li><a>Магазин</a></li>
             <li><a href="">Контакты</a></li>
           </ul>
-          <ul class="cart">
-            <li><a class="cart-link" href="">Корзина</a></li>
-          </ul>
+          <a class="cart-link" href="">Корзина</a>
         </nav>
         <h1>
           Магазин готовых шаблонов
@@ -53,43 +51,50 @@
             </fieldset>
             <fieldset class="grid">
               <legend class="filter">Сетка:</legend>
-              <ul>
+              <ul class="filter-design">
                 <li>
-                  <input type="radio" name="grid" value="adaptive" id="a-grid" checked>
+                  <input class="visually-hidden" type="radio" name="grid" value="adaptive" id="a-grid" checked>
                   <label class="filter-item" for="a-grid">Адаптивная</label>
                 </li>
                 <li>
-                  <input type="radio" name="grid" value="fixed" id="f-grid">
+                  <input  class="visually-hidden" type="radio" name="grid" value="fixed" id="f-grid">
                   <label class="filter-item" for="f-grid">Фиксированная</label>
                 </li>
                 <li>
-                  <input type="radio" name="grid" value="rubber" id="r-grid">
+                  <input class="visually-hidden" type="radio" name="grid" value="rubber" id="r-grid">
                   <label class="filter-item" for="r-grid">Резиновая</label>
                 </li>
               </ul>
             </fieldset>
             <fieldset class="grid">
               <legend class="filter">ОСОБЕННОСТИ:</legend>
-              <ul>
+              <ul class="filter-design">
                 <li>
-                  <input type="checkbox" name="slider" id="id-slider" checked>
-                  <label class="filter-item" for="id-slider">Слайдер</label>
+                  <label class="filter-item" for="id-slider">
+                  <input class="visually-hidden" type="checkbox" name="slider" id="id-slider" checked>
+                  <span class="checkbox-indicator"></span>
+                  Слайдер
+                  </label>
                 </li>
                 <li>
-                  <input type="checkbox" name="advantage" id="id-advantage">
+                  <input class="visually-hidden" type="checkbox" name="advantage" id="id-advantage">
                   <label class="filter-item" for="id-advantage">Блок преимуществ</label>
+                  <span class="checkbox-indicator"></span>
                 </li>
                 <li>
-                  <input type="checkbox" name="news" id="id-news" checked>
+                  <input class="visually-hidden" type="checkbox" name="news" id="id-news" checked>
                   <label class="filter-item" for="id-news">Новости</label>
+                  <span class="checkbox-indicator"></span>
                 </li>
                 <li>
-                  <input type="checkbox" name="gallery" id="id-gallery">
+                  <input class="visually-hidden" type="checkbox" name="gallery" id="id-gallery">
                   <label class="filter-item" for="id-gallery">Галерея</label>
+                  <span class="checkbox-indicator"></span>
                 </li>
                 <li>
-                  <input type="checkbox" name="basket" id="id-basket">
+                  <input class="visually-hidden" type="checkbox" name="basket" id="id-basket">
                   <label class="filter-item" for="id-basket">Корзина</label>
+                  <span class="checkbox-indicator"></span>
                 </li>
               </ul>
             </fieldset>
@@ -107,7 +112,7 @@
                 <li><a  class="sorting-item current" href="">По названию</a></li>
               </ul>
               <span class="up-down">
-                <a class="sorting-item" href=""><img src="img/index/icon-down-dir.svg" width="11" height="10" alt="Сортировка по убыванию"></a>
+                <a class="sorting-item down" href=""><img src="img/index/icon-down-dir.svg" width="11" height="10" alt="Сортировка по убыванию"></a>
                 <a class="sorting-item" href=""><img src="img/index/icon-up-dir.svg" width="11" height="10" alt="Сортировка по возрастанию"></a>
               </span>
             </div>
