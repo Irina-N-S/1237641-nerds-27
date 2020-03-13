@@ -17,23 +17,23 @@
           <ul class="site-navigation">
             <li><a href="">Студия</a></li>
             <li><a href="">Клиенты</a></li>
-            <li><a>Магазин</a></li>
+            <li class="current"><a>Магазин</a></li>
             <li><a href="">Контакты</a></li>
           </ul>
           <a class="cart-link" href="">Корзина</a>
         </nav>
-        <h1>
+        <h1 class="heading-1">
           Магазин готовых шаблонов
         </h1>
       </div>
     </header>
     <main>
-      <h2 class="visually-hidden">Нердс</h2>
+      <h2 class="visually-hidden heading-2">Нердс</h2>
       <div class="container patterns-sorting">
         <section class="filters">
-          <h2 class="visually-hidden">Фильтры</h2>
+          <h2 class="visually-hidden heading-2">Фильтры</h2>
           <form class="form-filters" action="https://echo.htmlacademy.ru" method="post">
-            <fieldset class="filter-item">
+            <fieldset class="filter-item no-frame">
               <legend>Стоимость:</legend>
               <div class="range-filter">
                 <div class="range-controls">
@@ -49,77 +49,94 @@
                 </div>
               </div>
             </fieldset>
-            <fieldset class="grid">
+            <fieldset class="grid no-frame">
               <legend class="filter">Сетка:</legend>
               <ul class="filter-design">
                 <li>
-                  <input class="visually-hidden" type="radio" name="grid" value="adaptive" id="a-grid" checked>
-                  <label class="filter-item" for="a-grid">Адаптивная</label>
+                  <label class="filter-item">
+                    <input class="visually-hidden" type="radio" name="grid" value="adaptive" checked>
+                    <span class="checkbox-indicator"></span>
+                    Адаптивная
+                  </label>
                 </li>
                 <li>
-                  <input  class="visually-hidden" type="radio" name="grid" value="fixed" id="f-grid">
-                  <label class="filter-item" for="f-grid">Фиксированная</label>
+                  <label class="filter-item">
+                    <input  class="visually-hidden" type="radio" name="grid" value="fixed">
+                    Фиксированная
+                    <span class="checkbox-indicator"></span>
+                  </label>
                 </li>
                 <li>
-                  <input class="visually-hidden" type="radio" name="grid" value="rubber" id="r-grid">
-                  <label class="filter-item" for="r-grid">Резиновая</label>
+                  <label class="filter-item">
+                    <input class="visually-hidden" type="radio" name="grid" value="rubber">
+                    Резиновая
+                    <span class="checkbox-indicator"></span>
+                  </label>
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="grid">
+            <fieldset class="grid no-frame">
               <legend class="filter">ОСОБЕННОСТИ:</legend>
               <ul class="filter-design">
                 <li>
-                  <label class="filter-item" for="id-slider">
-                  <input class="visually-hidden" type="checkbox" name="slider" id="id-slider" checked>
+                  <label class="filter-item">
+                  <input class="visually-hidden" type="checkbox" name="slider" checked>
                   <span class="checkbox-indicator"></span>
                   Слайдер
                   </label>
                 </li>
                 <li>
-                  <input class="visually-hidden" type="checkbox" name="advantage" id="id-advantage">
-                  <label class="filter-item" for="id-advantage">Блок преимуществ</label>
-                  <span class="checkbox-indicator"></span>
+                  <label class="filter-item">
+                    <input class="visually-hidden" type="checkbox" name="advantage">
+                    <span class="checkbox-indicator"></span>
+                    Блок преимуществ
+                  </label>
                 </li>
                 <li>
-                  <input class="visually-hidden" type="checkbox" name="news" id="id-news" checked>
-                  <label class="filter-item" for="id-news">Новости</label>
-                  <span class="checkbox-indicator"></span>
+                  <label class="filter-item">
+                    <input class="visually-hidden" type="checkbox" name="news" checked>
+                    <span class="checkbox-indicator"></span>
+                    Новости
+                  </label>
                 </li>
                 <li>
-                  <input class="visually-hidden" type="checkbox" name="gallery" id="id-gallery">
-                  <label class="filter-item" for="id-gallery">Галерея</label>
-                  <span class="checkbox-indicator"></span>
+                  <label class="filter-item">
+                    <input class="visually-hidden" type="checkbox" name="gallery">
+                    <span class="checkbox-indicator"></span>
+                    Галерея
+                  </label>
                 </li>
                 <li>
-                  <input class="visually-hidden" type="checkbox" name="basket" id="id-basket">
-                  <label class="filter-item" for="id-basket">Корзина</label>
-                  <span class="checkbox-indicator"></span>
+                  <label class="filter-item">
+                    <input class="visually-hidden" type="checkbox" name="basket">
+                    <span class="checkbox-indicator"></span>
+                    Корзина
+                  </label>
                 </li>
               </ul>
             </fieldset>
             <button class="button button-filter" type="submit">Показать</button>
           </form>
         </section>
-        <h2 class="visually-hidden">Список шаблонов</h2>
+        <h2 class="visually-hidden heading-2">Список шаблонов</h2>
         <section class="sorting-templates">
           <div class="sorting">
             <p class="sort-header">Сортировать:</p>
             <div class="sort-up-down">
               <ul class="sort">
-                <li><a class="sorting-item current" href="">По цене</a></li>
-                <li><a class="sorting-item current" href="">По типу</a></li>
-                <li><a  class="sorting-item current" href="">По названию</a></li>
+                <li><a class="sorting-item current-item" href="">По цене</a></li>
+                <li><a class="sorting-item" href="">По типу</a></li>
+                <li><a  class="sorting-item" href="">По названию</a></li>
               </ul>
               <span class="up-down">
-                <a class="sorting-item down" href=""><img src="img/index/icon-down-dir.svg" width="11" height="10" alt="Сортировка по убыванию"></a>
+                <a class="sorting-item down current-item" href=""><img src="img/index/icon-down-dir.svg" width="11" height="10" alt="Сортировка по убыванию"></a>
                 <a class="sorting-item" href=""><img src="img/index/icon-up-dir.svg" width="11" height="10" alt="Сортировка по возрастанию"></a>
               </span>
             </div>
           </div>
           <div>
             <ul class="patterns">
-              <li>
+              <li class="browser current-pattern">
                   <img src="img/catalog/img-sedona.jpg" width="360" height="576" alt="Шаблон SEDONA">
                 <div class="patterns-info">
                   <h3>
@@ -132,24 +149,24 @@
                   <span class="button price">9 900 руб.</span>
                 </div>
               </li>
-              <li>
+              <li class="browser">
                 <img src="img/catalog/img-pink.jpg" width="360" height="576" alt="Шаблон PINK">
               </li>
-              <li>
+              <li class="browser">
                 <img src="img/catalog/img-barbershop.jpg" width="360" height="576" alt="Шаблон Barbershop">
               </li>
-              <li>
+              <li class="browser">
                 <img src="img/catalog/img-mishka.jpg" width="360" height="576" alt="Шаблон Mishka">
               </li>
-              <li>
+              <li class="browser">
                 <img src="img/catalog/img-aplus.jpg" width="360" height="576" alt="Шаблон Aplus">
               </li>
-              <li>
+              <li class="browser">
                 <img src="img/catalog/img-kvast.jpg" width="360" height="576" alt="Шаблон Kvast">
               </li>
             </ul>
             <ul class="pages">
-              <li><a class="page page-item">1</a></li>
+              <li><a class="page page-item page-active">1</a></li>
               <li><a class="page page-item" href="">2</a></li>
               <li><a class="page page-item" href="">3</a></li>
               <li><a class="page page-next" href="">Следующая</a></li>
@@ -157,24 +174,26 @@
           </div>
         </section>
       </div>
-      <section class="modal">
-        <img src="img/index/map.jpg" width="1440" height="416" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
-        <img class="logo-small" src="img/index/map-marker.png" width="231" height="190" alt="Логотип Nerds">
-        <article class="contact">
-          <h3>
-            NЁRDS DESIGN STUDIO
-          </h3>
-          <div class="address">
-            <p>
-              191186, Санкт-Петербург,
-              ул. Б. Конюшенная, д. 19/8
-            </p>
-            <p>
-              тел. +7 (812) 275-75-75
-            </p>
-          </div>
-          <button class="button button-address" type="button">Напишите нам</button>
-        </article>
+      <section class="map">
+        <img class="map-placeholder" src="img/index/map.jpg" width="1440" height="416" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
+        <div class="container map-container">
+          <article class="contact">
+            <h3>
+              NЁRDS DESIGN STUDIO
+            </h3>
+            <div class="contact-address-tel">
+              <p class="contact-address">
+                191186, Санкт-Петербург,
+                ул. Б. Конюшенная, д. 19/8
+              </p>
+              <p class="contact-tel">
+                тел. +7 (812) 275-75-75
+              </p>
+            </div>
+            <button class="button button-address" type="button">Напишите нам</button>
+          </article>
+          <img class="map-point" src="img/index/map-marker.png" width="231" height="190" alt="Логотип Nerds">
+        </div>
       </section>
     </main>
     <footer class="main-footer container">
@@ -199,7 +218,7 @@
       </div>
     </footer>
     <div class="modal">
-      <h2>
+      <h2 class="heading-2">
         Напишите нам
       </h2>
       <button class="close button" type="button"><img src="img/index/close-cross.svg" alt="Кнопка закрытия"></button>
