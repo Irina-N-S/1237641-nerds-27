@@ -202,23 +202,27 @@
         </p>
       </div>
     </footer>
-    <div class="pop-up">
-      <h2 class="heading-2">
+    <div class="modal">
+      <h2 class="heading-2 feedback-head">
         Напишите нам
       </h2>
-      <button class="close button" type="button"><img src="img/index/close-cross.svg" alt="Кнопка закрытия"></button>
+      <button class="modal-close" type="button"></button>
       <form class="feedback" action="https://echo.htmlacademy.ru" method="post">
-        <p>
-          <label for="s-name">Ваше имя:</label>
-          <input type="text" name="name" id="s-name" placeholder="Имя Фамилия">
-          <label for="email">Ваш e-mail:</label>
-          <input type="email" name="mail" id="email" placeholder="email@example.com">
-        </p>
-        <p>
+        <div class="feedback-name-email">
+          <div class="feedback-info">
+            <label for="s-name">Ваше имя:</label>
+            <input type="text" name="name" id="s-name" placeholder="Имя Фамилия">
+          </div>
+          <div class="feedback-info">
+            <label for="email">Ваш e-mail:</label>
+            <input type="email" name="mail" id="email" placeholder="email@example.com">
+          </div>
+        </div>
+        <div class="feedback-info feedback-letter">
           <label for="t-lrtter">Текст письма:</label>
           <textarea name="letter" id="t-lrtter" placeholder="В свободной форме" rows="5" cols="50"></textarea>
-        </p>
-        <button class="button" type="submit">ОТПРАВИТЬ</button>
+        </div>
+        <button class="button feedback-button" type="submit">ОТПРАВИТЬ</button>
       </form>
     </div>
   </body>
