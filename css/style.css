@@ -97,17 +97,10 @@ img {
   margin: 0;
 }
 .advantage-slides {
-  display: flex;
   margin-bottom: 0;
   margin-top: 18px;
   padding-bottom: 0;
   position: relative;
-}
-.advantage-slides img {
-  position: absolute;
-  width: 698px;
-  top: 17px;
-  left: 430px;
 }
 .advantage {
   display: flex;
@@ -117,69 +110,86 @@ img {
   margin-right: 55px;
   padding-bottom: 80px;
 }
+.advantage span {
+  font-size: 55px;
+  line-height: 55px;
+  font-weight: 500;
+  color: #000000;
+  width: 515px;
+}
 .advantage p {
   margin: 0;
   padding-top: 28px;
   padding-bottom: 42px;
 }
-.slide-1 {
+.slide {
   display: none;
+  position: relative;
 }
-.slide-2 {
-  display: none;
+.slide img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  max-width: 760px;
 }
-.slide-3 {
+.controls {
+  display: flex;
+  width: 90px;
+  justify-content: space-between;
+
+  position: absolute;
+  z-index: 2;
+  bottom: 95px;
+
+  /* Центруем */
+  left: 50%;
+  transform: translateX(-50%);
+}
+.controls label {
+  position: relative;
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #fff;
+  font-size: 0;
+}
+#slide-1:checked ~ .advantage-slides .slide-1,
+#slide-2:checked ~ .advantage-slides .slide-2,
+#slide-3:checked ~ .advantage-slides .slide-3 {
+  display: flex;
+}
+#slide-1:checked ~ .advantage-slides label[for="slide-1"]::before,
+#slide-2:checked ~ .advantage-slides label[for="slide-2"]::before,
+#slide-3:checked ~ .advantage-slides label[for="slide-3"]::before {
+  content: '';
+  display: block;
+  position: absolute;
+  box-sizing: border-box;
+
+  /* центруем */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 8px;
+  height: 8px;
+
+  border: 2px solid #c1c1c1;
+  border-radius: 50%;
+}
+/* Переключение слайдов в зависимости от отмеченного radio */
+#slide-1:checked ~ .advantage-slides .slide-1,
+#slide-2:checked ~ .advantage-slides .slide-2,
+#slide-3:checked ~ .advantage-slides .slide-3 {
   display: block;
 }
-.slide-second img {
-  width: 663px;
-  top: 0px;
-  left: 493px;
-}
-.slide-second span {
-  width: 515px;
-}
-.slide-3 img {
-  width: 760px;
-  top: 19px;
-  left: 397px;
-}
-.slide-3 p {
-  width: 344px;
-}
+
 .more {
   width: 240px;
   text-align: center;
   padding-top: 19px;
   padding-bottom: 18px;
-}
-.slide {
-  background: transparent;
-  position: absolute;
-  left: 537px;
-  bottom: 96px;
-  display: flex;
-}
-.slide-button{
-  margin-right: 17px;
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  background-color: #ffffff;
-  border: 0;
-  position: relative;
-}
-.button-active::before {
-  display: block;
-  position: absolute;
-  box-sizing: border-box;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 8px;
-  height: 8px;  content: '';
-  border: 2px solid #c1c1c1;
-  border-radius: 50%;
 }
 .offers {
   display: flex;
@@ -235,7 +245,8 @@ img {
 .offers,
 .main-footer ul,
 .sorting-templates ul,
-.form-filters ul {
+.form-filters ul,
+.controls {
   list-style: none;
 }
 .filter-design li {
@@ -404,12 +415,6 @@ img {
   text-transform: uppercase;
   vertical-align: top;
 }
-.advantage span {
-  font-size: 55px;
-  line-height: 55px;
-  font-weight: 500;
-  color: #000000;
-}
 .logos {
   display: flex;
   justify-content: center;
@@ -575,6 +580,46 @@ img {
   color: #000000;
   margin: 0;
 }
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+
 .modal {
   display: none;
   position: fixed;
@@ -586,6 +631,13 @@ img {
   z-index: 1;
   background: white;
   box-shadow: 0 20px 40px rgba(0, 1, 1, 0.75);
+}
+.modal-show {
+  display: block;
+  animation: bounce 0.6s;
+}
+.modal-error {
+  animation: shake 0.6s;
 }
 .modal-close {
   width: 22px;

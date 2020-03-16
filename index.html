@@ -23,8 +23,11 @@
           </ul>
           <a class="cart-link" href="">Корзина</a>
         </nav>
+        <input class="visually-hidden" type="radio" name="slider-radio" id="slide-1" checked>
+        <input class="visually-hidden" type="radio" name="slider-radio" id="slide-2">
+        <input class="visually-hidden" type="radio" name="slider-radio" id="slide-3">
         <div class="advantage-slides">
-          <div class="slide-1">
+          <div class="slide slide-1">
             <div class="advantage">
               <span>
                 Долго, дорого, скрупулезно.
@@ -37,7 +40,7 @@
             </div>
             <img src="img/index/slide-picture1.png" width="698" height="413" alt="browser" />
           </div>
-          <div class="slide-2 slide-second">
+          <div class="slide slide-2">
             <div class="advantage">
               <span>
                 Любим математику как никто другой
@@ -50,24 +53,24 @@
             </div>
             <img src="img/index/slide-picture2.png" width="663" height="430" alt="browser" />
           </div>
-          <div class="slide-3">
+          <div class="slide slide-3">
             <div class="advantage">
               <span>
                 Только ночь, только хардкор
               </span>
               <p>
-                Работать днем, как все? Мы против этого.
+                Работать днем, как все? Мы против этого.<br>
                 Ближе к полуночи работа только начинается.
               </p>
               <a class="more button" href="">Узнать больше</a>
             </div>
             <img src="img/index/slide-picture3.png" width="759" height="411" alt="browser" />
           </div>
-          <div class="slide">
-            <button class="slide-button button-active" type="button"></button>
-            <button class="slide-button" type="button"></button>
-            <button class="slide-button" type="button"></button>
-          </div>
+          <ul class="controls">
+            <li><label for="slide-1">Первый</label></li>
+            <li><label for="slide-2">Второй</label></li>
+            <li><label for="slide-3">Третий</label></li>
+          </ul>
         </div>
       </div>
     </header>
@@ -253,5 +256,78 @@
         <button class="button feedback-button" type="submit">ОТПРАВИТЬ</button>
       </form>
     </div>
+  <script type="text/javascript">
+    var buttonWriteUs = document.querySelector(".button-address");
+    var popup = document.querySelector(".modal");
+    var buttonClose = document.querySelector(".modal-close");
+
+    var nameInput = popup.querySelector("[name=\"name\"]");
+    var emailInput = popup.querySelector("[name=\"mail\"]");
+    var letterInput = popup.querySelector("[name=\"letter\"]");
+    var form = popup.querySelector("form");
+
+    buttonWriteUs.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      popup.classList.add("modal-show");
+      letterInput.value = '';
+
+      var storedNameInputValue;
+      var storedEmailInputValue;
+      try {
+          storedNameInputValue = localStorage.getItem("nameInputValue");
+          storedEmailInputValue = localStorage.getItem("emailInputValue");
+      } catch (err) {
+          storedNameInputValue = "";
+          storedEmailInputValue = "";
+      }
+
+      nameInput.value = storedNameInputValue;
+      emailInput.value = storedEmailInputValue;
+
+      var focusSet = false;
+      if (!focusSet && !nameInput.value) {
+          focusSet = true;
+          nameInput.focus();
+      }
+      if (!focusSet && !emailInput.value) {
+          focusSet = true;
+          emailInput.focus();
+      }
+      if (!focusSet) {
+          letterInput.focus();
+      }
+    });
+
+    buttonClose.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        popup.classList.remove("modal-show");
+        popup.classList.remove("modal-error");
+    });
+
+    form.addEventListener("submit", function (evt) {
+       if (!nameInput.value || !emailInput.value) {
+           evt.preventDefault();
+           popup.classList.remove("modal-error");
+           // noinspection SillyAssignmentJS
+           popup.offsetWidth = popup.offsetWidth;
+           popup.classList.add("modal-error");
+       } else {
+           localStorage.setItem("nameInputValue", nameInput.value);
+           localStorage.setItem("emailInputValue", emailInput.value);
+       }
+    });
+
+    window.addEventListener("keydown", function (evt) {
+        if (evt.code !== 'Escape') {
+            return;
+        }
+        if (popup.classList.contains("modal-show")) {
+            evt.preventDefault();
+            popup.classList.remove("modal-show");
+            popup.classList.remove("modal-error");
+        }
+    });
+
+  </script>
   </body>
 </html>
