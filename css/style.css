@@ -18,6 +18,11 @@ img {
 .heading-1 {
   text-align: center;
   color: #000000;
+  font-size: 55px;
+  font-weight: 500;
+  margin: 0;
+  padding-bottom: 123px;
+  padding-top: 69px;
 }
 .heading-2 {
   font-size: 45px;
@@ -27,9 +32,9 @@ img {
 }
 .container {
   margin: 0 auto;
+  padding: 0 20px;
   width: 1200px;
   max-width: 100%;
-  padding: 0 20px;
   box-sizing: border-box;
 }
 .button {
@@ -69,16 +74,12 @@ img {
 .no-frame {
   border: none;
 }
-.header h1 {
-  margin: 0;
-  padding-bottom: 116px;
-  padding-top: 82px;
-}
 .main-navigation {
   line-height: 30px;
   text-transform: uppercase;
   font-weight: 500;
   color: #000000;
+  margin-bottom: 10px;
   padding-top: 49px;
   display: flex;
   align-items: center;
@@ -88,6 +89,7 @@ img {
   flex-wrap: wrap;
   margin-left: 200px;
   padding: 0;
+  margin-top: 30px;
 }
 .site-navigation li {
   padding: 0;
@@ -97,8 +99,7 @@ img {
   margin: 0;
 }
 .advantage-slides {
-  margin-bottom: 0;
-  margin-top: 18px;
+  margin: 0;
   padding-bottom: 0;
   position: relative;
 }
@@ -106,8 +107,8 @@ img {
   display: flex;
   flex-direction: column;
   width: 412px;
-  padding-top: 67px;
-  margin-right: 55px;
+  padding-top: 59px;
+  margin-right: 15px;
   padding-bottom: 80px;
 }
 .advantage span {
@@ -127,21 +128,15 @@ img {
   position: relative;
 }
 .slide img {
-  position: absolute;
-  right: 0;
-  bottom: 0;
   max-width: 760px;
 }
 .controls {
   display: flex;
-  width: 90px;
+  width: 95px;
   justify-content: space-between;
-
   position: absolute;
   z-index: 2;
-  bottom: 95px;
-
-  /* Центруем */
+  bottom: 82px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -166,23 +161,18 @@ img {
   display: block;
   position: absolute;
   box-sizing: border-box;
-
-  /* центруем */
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
   width: 8px;
   height: 8px;
-
   border: 2px solid #c1c1c1;
   border-radius: 50%;
 }
-/* Переключение слайдов в зависимости от отмеченного radio */
 #slide-1:checked ~ .advantage-slides .slide-1,
 #slide-2:checked ~ .advantage-slides .slide-2,
 #slide-3:checked ~ .advantage-slides .slide-3 {
-  display: block;
+  display: flex;
 }
 
 .more {
@@ -194,20 +184,23 @@ img {
 .offers {
   display: flex;
   flex-wrap: wrap;
+  margin: 0;
   margin-top: 80px;
   padding: 0;
   border-bottom: 2px solid #eeeeee;
-  padding-bottom: 80px;
+  padding-bottom: 40px;
 }
 .offers .offers-card {
   width: 300px;
   margin-right: 100px;
+  margin-bottom: 40px;
 }
 .offers li:last-child {
   margin-right: 0;
 }
 .offers-card p {
-  margin: 26px 0;
+  margin-top: 16px;
+  margin-bottom: 35px;
   width: 245px;
 }
 .button-card {
@@ -232,7 +225,8 @@ img {
   background: #dfdfdf;
 }
 .price:active {
-  background: #d5d5d5;
+  background: #d7373b;
+  color: #ffffff;
 }
 .cart-link:active,
 .cart:active {
@@ -264,10 +258,8 @@ img {
   position: absolute;
   top: -4px;
   left: -36px;
-
   width: 26px;
   height: 23px;
-
   background-image: url("../img/catalog/checkbox-off.png");
   background-repeat: no-repeat;
   opacity: 0.4;
@@ -285,14 +277,11 @@ img {
 }
 .filter-item input[type="checkbox"]:checked + .checkbox-indicator {
   content: "";
-
   position: absolute;
   top: -4px;
   left: -36px;
-
   width: 26px;
   height: 23px;
-
   background-image: url("../img/catalog/checkbox-on.svg");
   background-repeat: no-repeat;
 }
@@ -300,10 +289,8 @@ img {
   position: absolute;
   top: -3px;
   left: -35px;
-
-  width: 15px;
-  height: 15px;
-
+  width: 20px;
+  height: 20px;
   border: 3px solid #4d4d4d;
   border-radius: 50%;
   background-repeat: no-repeat;
@@ -313,8 +300,8 @@ img {
 .filter-item input[type="radio"]:checked + .checkbox-indicator::before {
   content: "";
   position: absolute;
-  top: 3px;
-  left: 3px;
+  top: 5px;
+  left: 5px;
   width: 5px;
   height: 5px;
   border: 2px solid #4d4d4d;
@@ -330,25 +317,26 @@ img {
   justify-content: space-between;
   margin-top: 40px;
   border-bottom: 2px solid #eeeeee;
-  padding-bottom: 76px;
+  padding-bottom: 72px;
 }
 .description {
   width: 650px;
-  margin-top: 40px;
+  margin-top: 33px;
 }
 .description h2 {
   margin: 0;
 }
 .description p {
-  margin-top: 35px;
-  margin-bottom: 47px;
+  margin-top: 32px;
+  margin-bottom: 38px;
 }
 .features-list ul {
   padding: 0;
+  margin: 0;
   padding-left: 38px;
 }
 .features-list li {
-  margin-top: 30px;
+  margin-top: 26px;
   position: relative;
 }
 .features-list li::before {
@@ -368,8 +356,8 @@ img {
   flex-direction: column;
 }
 .feature-item span {
-  margin-top: 32px;
-  margin-bottom: 49px;
+  margin-top: 28px;
+  margin-bottom: 39px;
   text-align: center;
 }
 .interest {
@@ -379,8 +367,11 @@ img {
   margin: 0;
   margin-right: 26px;
 }
+.interest-item sup {
+  font-size: 61%;
+}
 .interest-item li:last-child {
-  margin-top: 20px;
+  margin-top: 15px;
 }
 .current {
   border-bottom: 2px solid #fb565a;
@@ -436,14 +427,16 @@ img {
 .logo:active {
   opacity: 0.1;
 }
+.logos li {
+  position: relative;
+}
 .logos li::after {
   content: "";
   border-left: 2px solid #eeeeee;
-  width: 2px;
   height: 52px;
   position: absolute;
-  bottom: 64px;
-  display: inline-block;
+  top: 50%;
+  transform: translateY(-50%);
 }
 .logos li:last-child::after {
   display: none;
@@ -502,6 +495,8 @@ img {
   text-transform: uppercase;
   font-weight: bold;
   color: #000000;
+  margin: 0;
+  margin-top: 15px;
 }
 .button-applications {
   background: #00ca74;
@@ -544,7 +539,7 @@ img {
 }
 .contact h3 {
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 26px;
 }
 .contact-address-tel {
   margin: 0;
@@ -555,11 +550,11 @@ img {
 }
 .contact-tel {
   margin: 0;
-  margin-top: 16px;
+  margin-top: 20px;
 }
 .button-address {
   width: 219px;
-  margin-top: 37px;
+  margin-top: 34px;
 }
 .map-point {
   margin-top: 35px;
@@ -579,29 +574,30 @@ img {
   font-weight: bold;
   color: #000000;
   margin: 0;
+  text-transform: uppercase;
 }
 @keyframes bounce {
   0% {
-    transform: translateY(-2000px);
+    margin-top: -2000px;
   }
 
   70% {
-    transform: translateY(30px);
+    margin-top: 30px;
   }
 
   90% {
-    transform: translateY(-10px);
+    margin-top: -10px;
   }
 
   100% {
-    transform: translateY(0);
+    margin-top: 0;
   }
 }
 
 @keyframes shake {
   0%,
   100% {
-    transform: translateX(0);
+    margin-left: 0;
   }
 
   10%,
@@ -609,17 +605,16 @@ img {
   50%,
   70%,
   90% {
-    transform: translateX(-10px);
+    margin-left: -10px;
   }
 
   20%,
   40%,
   60%,
   80% {
-    transform: translateX(10px);
+    margin-left: 10px;
   }
 }
-
 .modal {
   display: none;
   position: fixed;
@@ -659,7 +654,6 @@ img {
   background-color: #e74246;
   top: 9px;
   left: 2px;
-  background-color: #e74246;
 }
 .modal-close::before {
   transform: rotate(45deg);
@@ -750,7 +744,9 @@ img {
 }
 .main-footer li {
   margin-right: 12px;
-  position: relative;
+}
+.main-footer a {
+  display: flex;
 }
 .main-footer li:last-child {
   margin-right: 0;
@@ -772,7 +768,6 @@ img {
 .social-button {
   color: white;
   background: #e1e1e1;
-  background-position: center;
   display: block;
   width: 79px;
   height: 79px;
@@ -790,35 +785,27 @@ img {
 .instagram:active::after {
   opacity: 0.3;
 }
-.vk::after {
-  content: "";
-  background-image: url(../img/index/vk-icon.svg);
-  background-repeat: no-repeat;
-  position: absolute;
-  width: 28px;
-  height: 17px;
-  top: 33px;
-  left: 25px;
-}
-.facebook::after {
-  content: "";
-  background-image: url("../img/index/fb-icon.svg");
-  background-repeat: no-repeat;
-  position: absolute;
-  width: 15px;
-  height: 25px;
-  top: 25px;
-  left: 33px;
-}
+.vk::after,
+.facebook::after,
 .instagram::after {
   content: "";
-  background-image: url("../img/index/insta-icon.svg");
   background-repeat: no-repeat;
-  position: absolute;
+  margin: auto;
+}
+.vk::after {
+  background-image: url(../img/index/vk-icon.svg);
+  width: 28px;
+  height: 17px;
+}
+.facebook::after {
+  background-image: url("../img/index/fb-icon.svg");
+  width: 15px;
+  height: 25px;
+}
+.instagram::after {
+  background-image: url("../img/index/insta-icon.svg");
   width: 25px;
   height: 25px;
-  top: 27px;
-  left: 29px;
 }
 .patterns-sorting {
   display: flex;
@@ -832,7 +819,7 @@ img {
   display: flex;
   flex-direction: column;
 }
-/* Chrome, Safari, Edge, Opera */
+
 .form-filters input::-webkit-outer-spin-button,
 .form-filters input::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -850,17 +837,17 @@ img {
 .grid {
   padding: 0;
   margin: 0;
-  margin-bottom: 50px;
+  margin-bottom: 28px;
 }
 .filter {
-  margin-bottom: 21px;
+  margin-bottom: 14px;
 }
 .grid ul{
   padding: 0;
   margin: 0;
 }
 .grid li {
-  margin-bottom: 15px;
+  margin-bottom: 16px;
 }
 .sorting-templates {
   display: flex;
@@ -935,7 +922,6 @@ img {
   position: absolute;
   bottom: 0;
   width: 360px;
-  top: 320px;
   background-color: #eeeeee;
   border: solid 1px rgba(77, 77, 77, 0.1);
 }
@@ -944,12 +930,12 @@ img {
 .browser:focus,
 .browser:hover {
   display: block;
-  box-shadow: 0px 6px 15px 0 rgba(0, 1, 1, 0.25);
+  box-shadow: 0 6px 15px 0 rgba(0, 1, 1, 0.25);
 }
 .patterns-info h3 {
   margin: 0;
-  margin-top: 71px;
-  margin-bottom: 25px;
+  margin-top: 30px;
+  margin-bottom: 15px;
   text-align: center;
   text-transform: uppercase;
 }
@@ -981,43 +967,44 @@ img {
 .pages {
   display: flex;
   padding: 0;
-  margin-top: 30px;
+  margin-top: 22px;
   margin-bottom: 60px;
 }
 .page {
   font: inherit;
   line-height: 18px;
-  background: #eeeeee;
   color: #000000;
-  vertical-align: middle;
-  height: 32px;
-  padding-top: 13px;
-  display: block;
-  text-align: center;
   text-transform: uppercase;
+  font-weight: 500;
 }
 .page:focus {
   background: #dfdfdf;
 }
-.page-item {
+.pages li {
+  width: 50px;
+  height: 50px;
   margin-right: 11px;
-  width: 45px;
+  background: #eeeeee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.page-next {
+.pages li:last-child {
   width: 260px;
+  background: #eeeeee;
 }
-.page-active {
-  background: white;
+.pages .page-active {
+  background: #ffffff;
   border: solid 3px #dbdbdb;
-  width: 37px;
-  height: 29px;
-  padding-top: 9px;
+  width: 45px;
+  height: 45px;
 }
 .cart-link {
   padding-left: 41px;
   position: relative;
   display: block;
   margin-left: auto;
+  margin-top: 10px;
 }
 .cart-link::before {
   content: "";
@@ -1041,7 +1028,7 @@ img {
   line-height: 20px;
   margin: 0;
   padding: 0;
-  margin-bottom: 60px;
+  margin-bottom: 54px;
   border: none;
   position: relative;
   cursor: pointer;
@@ -1059,7 +1046,7 @@ img {
 .range-controls {
   position: relative;
   height: 41px;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
   padding-top: 39px;
   padding-right: 20px;
   padding-left: 20px;
