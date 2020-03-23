@@ -7,7 +7,6 @@ body {
   color: #283136;
   font-weight: normal;
   width: 100%;
-  /*max-width: 1440px;*/
   overflow-x: hidden;
 }
 a {
@@ -54,7 +53,7 @@ img {
   text-align: center;
   padding-top: 19px;
   padding-bottom: 18px;
-  border-radius: 3%;
+  border-radius: 4%;
 }
 .button:hover,
 .button:focus {
@@ -261,7 +260,7 @@ img {
   margin-bottom: 40px;
   position: relative;
 }
-.offers li:last-child {
+.offers li:nth-child(3) {
   margin-right: 0;
 }
 .offers-card p {
@@ -342,19 +341,21 @@ img {
   background-repeat: no-repeat;
   cursor: pointer;
 }
-.filter-item input[type="checkbox"]:enabled:focus + .checkbox-indicator,
-.filter-item input[type="checkbox"]:enabled:hover + .checkbox-indicator,
-.filter-item input[type="radio"]:enabled:focus + .checkbox-indicator,
-.filter-item input[type="radio"]:enabled:hover + .checkbox-indicator {
+.filter-item input[type="checkbox"]:focus + .checkbox-indicator,
+.filter-item input[type="checkbox"]:hover + .checkbox-indicator,
+.filter-item input[type="radio"]:focus + .checkbox-indicator,
+.filter-item input[type="radio"]:hover + .checkbox-indicator {
   opacity: 1;
+}
+.filter-item input[type="checkbox"]:disabled + .checkbox-indicator,
+.filter-item input[type="radio"]:disabled + .checkbox-indicator,
+.filter-item input[type="checkbox"]:disabled ~ span,
+.filter-item input[type="radio"]:disabled  ~ span {
+  opacity: 0.1;
 }
 .filter-item input[type="checkbox"] + span,
 .filter-item input[type="radio"] + span {
   opacity: 0.4;
-}
-.filter-item input[type="checkbox"]:disabled ~ span,
-.filter-item input[type="radio"]:disabled  ~ span {
-  opacity: 0.1;
 }
 .filter-item input[type="checkbox"]:checked + .checkbox-indicator {
   content: "";
@@ -664,6 +665,7 @@ img {
   width: 100%;
   min-width: 1200px;
   height: 100%;
+  object-fit: cover;
 }
 .map-container {
   position: relative;
@@ -1044,16 +1046,19 @@ img {
   background-image: url("../img/index/vk-icon.svg");
   width: 28px;
   height: 17px;
+  background-position: center;
 }
 .facebook::after {
   background-image: url("../img/index/fb-icon.svg");
   width: 15px;
   height: 25px;
+  background-position: center;
 }
 .instagram::after {
   background-image: url("../img/index/insta-icon.svg");
   width: 25px;
   height: 25px;
+  background-position: center;
 }
 .patterns-sorting {
   display: -webkit-box;
@@ -1204,19 +1209,21 @@ img {
   44px 0 0 0 white;
 }
 .patterns-info {
-  /*display: none;*/
+  display: none;
   position: absolute;
   bottom: 0;
   width: 360px;
   background-color: #eeeeee;
   border: solid 1px rgba(77, 77, 77, 0.1);
 }
-.browser:focus .patterns-info,
-.browser:hover .patterns-info,
 .browser:focus,
 .browser:hover {
   -webkit-box-shadow: 0 6px 15px 0 rgba(0, 1, 1, 0.25);
   box-shadow: 0 6px 15px 0 rgba(0, 1, 1, 0.25);
+}
+.browser:focus .patterns-info,
+.browser:hover .patterns-info {
+  display: block;
 }
 .patterns-info h3 {
   margin: 0;
@@ -1289,6 +1296,7 @@ img {
   height: 50px;
   margin-right: 11px;
   background: #eeeeee;
+  border-radius: 4px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1328,10 +1336,10 @@ img {
   background-position: 0 0;
 }
 .addition {
-  margin-top: 7px;
+  margin-top: 5px;
 }
 .addition p {
-  margin-top: 8px;
+  margin-top: 9px;
 }
 .filter-item {
   line-height: 20px;
