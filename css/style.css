@@ -260,7 +260,7 @@ img {
   margin-bottom: 40px;
   position: relative;
 }
-.offers li:nth-child(3) {
+.offers li:nth-child(3n+3) {
   margin-right: 0;
 }
 .offers-card p {
@@ -326,7 +326,7 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 44px;
+  width: 42px;
 }
 .down {
   margin-right: 18px;
@@ -1064,11 +1064,13 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  flex-wrap: wrap;
   margin-top: 54px;
 }
 .filters {
   margin-right: 140px;
-  width: 261px;
+  width: 258px;
+  margin-bottom: 40px;
 }
 .form-filters {
   display: -webkit-box;
@@ -1137,11 +1139,11 @@ img {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin: 0;
-  margin-right: 44px;
+  margin-right: 46px;
   padding: 0;
 }
 .sort li {
-  margin-right: 26px;
+  margin-right: 25px;
 }
 .sort-up-down {
   display: -webkit-box;
@@ -1233,7 +1235,7 @@ img {
   text-transform: uppercase;
 }
 .patterns li:nth-child(odd) {
-  margin-right: 40px;
+  margin-right: 41px;
 }
 .definition {
   margin: 0 auto;
